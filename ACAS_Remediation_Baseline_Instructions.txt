@@ -1,0 +1,30 @@
+File: ACAS_Remediation_Baseline_Instructions.txt
+
+Purpose: To provide evaluation instructions for Assured Compliance Assessment
+         (ACAS) testing in order to compare the results between vendor's
+         recommendations on how to correct vulnerabilities in Container files.
+
+ACAS is a set of information security tools used for vulnerability scanning
+and risk assessment used by the United States Department of Defense (DoD).
+ 
+The "API-DownloadMS" folder (demo code) that is provided, serves as the files for
+the baseline scans for the ACAS Vulnerability scanning and risk Assessment.
+The Operating System (OS) is not included in the scans. All ACAS scans should
+use these files for scanning so that the scan results can be compared directly
+between all applications from vendors.
+
+I'm enclosing the initial scan report. As I fixed vulnerabilities on a local 
+test copy, newer updates showed up for the fixes so I made the changes to 
+those as well. I'm also enclosing the final scan results after everything
+was remediated.
+
+This is what was performed to correct reported vulnerabilities for the 
+demo project files:
+
+    In the "package.jason" file, change: "axios": "^0.21.1", to "axios": "^0.25.0”,
+    In the "package.jason" file, change: "mongodb": "^3.6.8", to "mongodb": "^4.2.2”,
+    In the "package.jason" file, add:  "ansi-regex": "^6.0.1"
+
+Hopefully you should have the same results with all ACAS scanners being tested.
+
+Jeff H.
